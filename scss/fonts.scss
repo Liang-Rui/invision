@@ -1,0 +1,41 @@
+// H1 heading, 1440 42px
+.title-1 {
+    @include font-size(2.625rem);
+    line-height: 1.357;
+    letter-spacing: 0.81px;
+}
+
+// H3 heading, 1440 26px
+.title-3 {
+    @include font-size(1.625rem);
+    line-height: 1.385;
+    letter-spacing: 0.5px;
+}
+
+// H5 heading, 1440 18px
+.title-5 {
+    @include font-size(1.125rem);
+    line-height: 1.667;
+    letter-spacing: 0;
+}
+
+// H6 heading, 1440 16px
+.title-6 {
+    @include font-size(1rem);
+    line-height: 1.75;
+    letter-spacing: 0;
+}
+
+// main paragraph for h3
+.p3 {
+    @include font-size(1.125rem);
+    line-height: 1.667;
+    letter-spacing: 0;
+}
+
+// main paragraph for h6
+.p6 {
+    @include font-size(1rem);
+    line-height: 1.75;
+    letter-spacing: 0;
+}
