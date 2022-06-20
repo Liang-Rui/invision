@@ -1,0 +1,25 @@
+.image-card-container {
+    width: 100%;
+    height: calc(223px + (290 - 223) * (100vw - 320px) / (1440 - 320));
+    border-bottom: 4px solid #CF1430;
+    margin-bottom: 1.6875rem;
+}
+
+.image-card-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-card-cta {
+    border-bottom: 1px solid #cf1430;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+    .image-card-container {
+        height: 290px;
+    }
+    
+}

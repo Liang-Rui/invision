@@ -2,8 +2,35 @@ import React from 'react';
 import image1 from '/assets/images/pages/home/image-01.jpg';
 import image2 from '/assets/images/pages/home/image-02.jpg';
 import image3 from '/assets/images/pages/home/image-03.jpg';
+import ImageCard from '/src/components/ImageCard.jsx';
+import image4 from '/assets/images/pages/home/image-04-lg.jpg';
+import image5 from '/assets/images/pages/home/image-05-lg.jpg';
+import image6 from '/assets/images/pages/home/image-06-lg.jpg';
+
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const cards = [
+    {
+        'title': 'Summer Lunch Menu By Mark Best',
+        'content': 'AEG ambassador Mark Best\'s summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.',
+        'image': image4,
+        'link': '/card-1'
+    },
+    {
+        'title': 'A Traditional Christmas Eve, Mark Best Style',
+        'content': 'One of Australia\'s best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.',
+        'image': image5,
+        'link': '/card-2'
+    },
+    {
+        'title': 'Taking Taste Further',
+        'content': 'This exclusive cookbook gives you all the know - how you need. We\'ve designed it to make sure you get the most out of our products - and the best out of your food.',
+        'image': image6,
+        'link': '/card-3'
+    },
+  ];
+  let navigate = useNavigate();
   return (
       <div className='container home-top-padding'>
         {/* TODO: create anchor clicks */}
@@ -43,9 +70,32 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        {/* Section 2 */}
-        <div className='row'>
 
+        {/* Section 2 */}
+        <div className='row s2-container'>
+            <div className='col-12'>
+                <p className='title-1 fw-light text-center'>ALL THE LATEST FROM AEG</p>
+            </div>
+        </div>
+
+        {/* Section 3 */}
+        <div className='row'>
+            <div className='col-12'>
+                <div className='row'>
+                    {
+                        cards.map((item, index) => {
+                            return <div className='col-12 col-lg-4 mb-4' key={'image-card-container-' + index}>
+                                <ImageCard 
+                                    image={item.image} 
+                                    title={item.title} 
+                                    content={item.content} 
+                                    redirect={() => navigate(item.link)} 
+                                    key={'image-card-' + index}/>
+                            </div>
+                        })
+                    }
+                </div>
+            </div>
         </div>
       </div>
   );
