@@ -1,8 +1,9 @@
 import React from 'react';
+import Home from 'pages/home/index.jsx'
 
 const Main = () => {
   return (
-      <h3>Hello World</h3>
+      <Home />
   );
 };
 
