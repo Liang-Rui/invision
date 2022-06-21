@@ -6,6 +6,9 @@ import {
 } from "react-router-dom";
 import Home from 'pages/home/index.jsx'
 
+import { ReactDOM } from 'react';
+
+
 
 const Main = () => {
   return (
